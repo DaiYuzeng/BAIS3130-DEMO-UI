@@ -12,16 +12,16 @@ defineProps<{
         class="text-gray-700 hover:text-blue-600"
         active-class="text-blue-600 font-bold"
       >
-        Home
+        Dashboard
       </router-link>
     </li>
     <li>
       <router-link
-        :to="{ name: 'about'}"
+        :to="{ name: 'teetime'}"
         class="text-gray-700 hover:text-blue-600"
         active-class="text-blue-600 font-bold"
       >
-      About
+      Tee Time
       </router-link>
     </li>
   </ul>
