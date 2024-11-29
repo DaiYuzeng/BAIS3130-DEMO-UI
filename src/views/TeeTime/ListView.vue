@@ -1,5 +1,8 @@
 <template>
-  <div class="overflow-x-auto">
+  <div class="overflow-x-auto w-full">
+    <router-link :to="{name: 'teetime-create'}">
+      <button class="bg-blue-500 text-white mb-2 px-2 py-1 float-right rounded hover:bg-blue-600">Create</button>
+    </router-link>
     <table class="table-auto w-full border-collapse border border-gray-200">
       <!-- Table Header -->
       <thead class="bg-gray-200">

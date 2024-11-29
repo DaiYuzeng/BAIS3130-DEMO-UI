@@ -17,7 +17,7 @@ defineProps<{
     </li>
     <li>
       <router-link
-        :to="{ name: 'teetime'}"
+        :to="{ name: 'teetime-list'}"
         class="text-gray-700 hover:text-blue-600"
         active-class="text-blue-600 font-bold"
       >
