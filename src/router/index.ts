@@ -12,11 +12,20 @@ const router = createRouter({
     {
       path: '/teetime',
       name: 'teetime',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/TeeTimeView.vue'),
-    },
+      component: () => import('@/views/TeeTime/Index.vue'), // Add a layout for Tee Time
+      children: [
+        {
+          path: '', // Matches /teetime
+          name: 'teetime-list',
+          component: () => import('@/views/TeeTime/ListView.vue'),
+        },
+        {
+          path: 'create', // Matches /teetime/create
+          name: 'teetime-create',
+          component: () => import('@/views/TeeTime/CreateView.vue'),
+        },
+      ]
+    }
   ],
 })
 
