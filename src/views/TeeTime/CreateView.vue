@@ -1,16 +1,31 @@
 <template>
   <div class="container mx-auto bg-blue-50 h-full">
+    <div
+        v-if="validationMessage"
+        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+        role="alert"
+      >
+
+    </div>
     <div class="bg-white p-8 shadow-lg rounded-lg w-full flex-1">
       <h1 class="text-2xl font-bold mb-2">Book Tee Time</h1>
       <p class="text-gray-600 mb-6">Book Standing or Regular Tee Time</p>
 
       <div
-        v-if="validationMessage"
-        class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4"
+        v-if="currentRole.name !== 'Shareholder' && currentRole.name !== 'Cooper'"
+        class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative mb-4"
         role="alert"
       >
-      {{ validationMessage }}
-    </div>
+        You are limited to request standing tee time, please upgrade to shareholder to unlock the permission.
+      </div>
+
+      <div
+        v-if="currentRole.name === 'Cooper'"
+        class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative mb-4"
+        role="alert"
+      >
+        You are limited to book any types of tee time, please upgrade to silver member to unlock the permission.
+      </div>
 
       <!-- Form -->
       <form @submit.prevent="submitForm">
