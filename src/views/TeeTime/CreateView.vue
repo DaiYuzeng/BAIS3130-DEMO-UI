@@ -16,7 +16,7 @@
         class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative mb-4"
         role="alert"
       >
-        You are limited to request standing tee time, please upgrade to shareholder to unlock the permission.
+        You are currently unable to request standing tee time. Please upgrade to Shareholder Membership to unlock this feature.
       </div>
 
       <div
@@ -24,7 +24,7 @@
         class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative mb-4"
         role="alert"
       >
-        You are limited to book any types of tee time, please upgrade to silver member to unlock the permission.
+      You are currently unable to book any tee times. Please upgrade to Silver Membership to unlock this feature.
       </div>
 
       <!-- Form -->
